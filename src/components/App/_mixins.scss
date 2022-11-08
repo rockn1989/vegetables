@@ -1,0 +1,31 @@
+@use '../App/vars';
+@use "sass:math";
+
+@mixin adpFont($minFz, $minLh, $maxFz, $maxLh, $minVw, $maxVw) {
+  font-size: calc(#{$minFz}px + (#{$maxFz} - #{$minFz}) * ((100vw - #{$minVw}px) / (#{$maxVw} - #{$minVw})));
+  line-height: calc(#{$minLh}px + (#{$maxLh} - #{$minLh}) * ((100vw - #{$minVw}px) / (#{$maxVw} - #{$minVw})));
+
+  @media (min-width: #{$maxVw}px) {
+    font-size: #{$maxFz}px;
+    line-height: #{$maxLh}px;
+  }
+}
+
+
+@mixin listReset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin spread-map($map: ()) {
+
+  @each $key,
+  $value in $map {
+    #{$key}: $value;
+  }
+}
+
+@function em($PXSize) {
+  @return ($PXSize / 18) * 1em;
+}

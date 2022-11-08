@@ -1,0 +1,13 @@
+@use '../../../App//vars';
+
+.slider-section {
+  padding: 44px 0;
+
+  @media (min-width: vars.$tablet-w) {
+    padding: 68px 0;
+  }
+
+  @media (min-width: vars.$desk-w) {
+    padding: 137px 0;
+  }
+}

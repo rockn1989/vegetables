@@ -1,0 +1,30 @@
+$mob-s: 640px;
+$tablet-w: 768px;
+$desk-w: 960px;
+$desk-w-lg: 1200px;
+
+$mainFont: 'DM Sans';
+$secondFont: 'Rosario';
+$fontSize: 18px;
+$lineHeight: 24px;
+
+
+$containerWidth: 1280px;
+
+
+$theme-map-light: (
+  --theme-primary-color: #222222,
+  --theme-second-color: #ffffff,
+  --theme-bg-color: #F3FBF8,
+  --theme-bg-color-hover: darken(#F3FBF8, 10%),
+  --theme-bg-color-elements: #09A66D,
+  --theme-bg-color-elements-hover: darken(#09A66D, 10%),
+);
+
+
+$theme-map-dark: (
+  --theme-primary-color: #ffffff,
+  --theme-background-color: #F3FBF8,
+  --theme-bg-color-elements: #09A66D,
+
+);
