@@ -9,7 +9,7 @@ import { ParticularSection } from '../Layout/Sections/ParticularSection';
 import { SliderSection } from '../Layout/Sections/SliderSection';
 import { DownloadSection } from '../Layout/Sections/DownloadSection';
 
-export const App = () => {
+const App = () => {
   return (
     <div className="App light">
       <PageWrapper>
@@ -24,3 +24,5 @@ export const App = () => {
     </div>
   );
 };
+
+export { App };

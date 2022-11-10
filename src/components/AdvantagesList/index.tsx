@@ -26,7 +26,7 @@ const AdvantagesListMocks = [
   }
 ];
 
-export const AdvantagesList = () => {
+const AdvantagesList = () => {
   const [active, setActive] = useState(1);
   const onItemClickHandler = (index: number) => setActive(index);
 
@@ -48,3 +48,5 @@ export const AdvantagesList = () => {
     </ul>
   )
 };
+
+export { AdvantagesList };

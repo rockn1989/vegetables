@@ -7,7 +7,7 @@ interface LayoutProps {
   children: React.ReactNode
 }
 
-export const Layout = ({ children }: LayoutProps) => {
+const Layout = ({ children }: LayoutProps) => {
   return (
     <main className="page-main">
       <Header />
@@ -16,3 +16,5 @@ export const Layout = ({ children }: LayoutProps) => {
     </main>
   )
 };
+
+export { Layout };

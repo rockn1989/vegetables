@@ -14,7 +14,7 @@ const FooterNavMocks = [
   }
 ];
 
-export const Footer = () => {
+const Footer = () => {
   return (
     <footer className='page-footer'>
       <div className="container">
@@ -61,3 +61,5 @@ export const Footer = () => {
     </footer>
   )
 }
+
+export { Footer };

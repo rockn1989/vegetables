@@ -5,7 +5,7 @@ interface FacebookIconProps {
   height: number
 };
 
-export const FacebookIcon = ({ width, height }: FacebookIconProps) => {
+const FacebookIcon = ({ width, height }: FacebookIconProps) => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width={`${width}px`} height={`${height}px`} fill="currentColor" viewBox="0.1 0.79 24 24">
       <g clipPath="url(#clip0_1_75)">
@@ -19,3 +19,5 @@ export const FacebookIcon = ({ width, height }: FacebookIconProps) => {
     </svg>
   )
 };
+
+export { FacebookIcon };

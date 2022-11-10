@@ -18,7 +18,7 @@ const SocListMocks = [
   }
 ];
 
-export const SocList = () => {
+const SocList = () => {
   return (
     <ul className="soc-list">
       {
@@ -33,3 +33,5 @@ export const SocList = () => {
     </ul>
   )
 };
+
+export { SocList };

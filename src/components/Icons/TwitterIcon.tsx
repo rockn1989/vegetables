@@ -5,7 +5,7 @@ interface TwitterIconProps {
   height: number
 };
 
-export const TwitterIcon = ({ width, height }: TwitterIconProps) => {
+const TwitterIcon = ({ width, height }: TwitterIconProps) => {
   return (
     <svg width={`${width}px`} height={`${height}px`} viewBox="0 0 25 25" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
       <g clipPath="url(#clip0_1_79)">
@@ -20,3 +20,5 @@ export const TwitterIcon = ({ width, height }: TwitterIconProps) => {
 
   )
 };
+
+export { TwitterIcon };

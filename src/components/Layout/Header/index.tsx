@@ -16,7 +16,7 @@ const BurgerIcon = ({ onClick }: BurgerIconProps) => {
   )
 }
 
-export const Header = () => {
+const Header = () => {
 
   const [active, setActive] = useState(false);
 
@@ -63,3 +63,5 @@ export const Header = () => {
     </header>
   )
 };
+
+export { Header };

@@ -27,7 +27,7 @@ const SlidesMocks = [
 ];
 
 
-export const SimpleSlider = () => {
+const SimpleSlider = () => {
   return (
     <Swiper
       modules={[Navigation, A11y, Lazy]}
@@ -65,3 +65,5 @@ export const SimpleSlider = () => {
     </Swiper>
   )
 };
+
+export {SimpleSlider};

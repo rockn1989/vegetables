@@ -2,7 +2,7 @@ import React from 'react'
 import { SimpleSlider } from '../../../Swiper';
 import './slider-section.scss';
 
-export const SliderSection = () => {
+const SliderSection = () => {
   return (
     <section className="slider-section">
       <div className="container">
@@ -11,3 +11,5 @@ export const SliderSection = () => {
     </section>
   )
 };
+
+export { SliderSection };

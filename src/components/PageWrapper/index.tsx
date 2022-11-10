@@ -5,10 +5,12 @@ type PageWrapperProps = {
   children: React.ReactNode
 };
 
-export const PageWrapper = ({ children }: PageWrapperProps) => {
+const PageWrapper = ({ children }: PageWrapperProps) => {
   return (
     <div className="page-wrapper">
       {children}
     </div>
   )
 };
+
+export { PageWrapper };

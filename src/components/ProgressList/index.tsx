@@ -26,7 +26,7 @@ const ProgressListMocks = [
   }
 ];
 
-export const ProgressList = () => {
+const ProgressList = () => {
   return (
     <ul className="progress-list">
       {ProgressListMocks.map(({ icon, text, label, width, height }, index) => {
@@ -45,3 +45,5 @@ export const ProgressList = () => {
     </ul>
   )
 };
+
+export { ProgressList };

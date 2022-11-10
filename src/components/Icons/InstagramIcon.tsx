@@ -5,7 +5,7 @@ interface InstagramIconProps {
   height: number
 };
 
-export const InstagramIcon = ({ width, height }: InstagramIconProps) => {
+const InstagramIcon = ({ width, height }: InstagramIconProps) => {
   return (
     <svg width={`${width}px`} height={`${height}px`} viewBox="0 0 25 25" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
       <g clipPath="url(#clip0_1_83)">
@@ -22,3 +22,5 @@ export const InstagramIcon = ({ width, height }: InstagramIconProps) => {
 
   )
 };
+
+export { InstagramIcon };

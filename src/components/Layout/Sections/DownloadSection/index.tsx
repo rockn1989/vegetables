@@ -1,7 +1,7 @@
 import React from 'react'
 import './download-section.scss';
 
-export const DownloadSection = () => {
+const DownloadSection = () => {
   return (
     <section className="download-section">
       <div className="container">
@@ -23,3 +23,5 @@ export const DownloadSection = () => {
     </section>
   )
 };
+
+export { DownloadSection };

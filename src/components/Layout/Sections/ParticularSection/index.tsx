@@ -2,7 +2,7 @@ import React from 'react';
 import { ArrowRight } from '../../../Icons';
 import './particular-section.scss';
 
-export const ParticularSection = () => {
+const ParticularSection = () => {
   return (
     <section className="particular-section">
       <div className="container">
@@ -36,3 +36,5 @@ export const ParticularSection = () => {
     </section>
   )
 };
+
+export { ParticularSection };

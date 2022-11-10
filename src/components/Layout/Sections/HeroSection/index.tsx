@@ -4,7 +4,7 @@ import { ArrowRight } from '../../../Icons';
 
 import './hero-section.scss';
 
-export const HeroSection = () => {
+const HeroSection = () => {
   return (
     <section className="hero-section">
       <div className="container">
@@ -28,3 +28,5 @@ export const HeroSection = () => {
     </section >
   )
 };
+
+export { HeroSection };

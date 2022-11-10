@@ -3,7 +3,7 @@ import { AdvantagesList } from '../../../AdvantagesList';
 
 import './best-section.scss';
 
-export const BestSection = () => {
+const BestSection = () => {
   return (
     <section className="best-section">
       <div className="container">
@@ -32,3 +32,5 @@ export const BestSection = () => {
     </section>
   )
 };
+
+export { BestSection };
