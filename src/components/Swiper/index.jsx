@@ -39,8 +39,8 @@ export const SimpleSlider = () => {
       autoHeight={true}
     >
       {
-        SlidesMocks.map(({title, text, authorName, imgSrc}) => {
-          return <SwiperSlide>
+        SlidesMocks.map(({title, text, authorName, imgSrc}, index) => {
+          return <SwiperSlide key={index}>
             <div className="slide__item">
               <div className="slide__text">
                 <div className="slide__title title-h1">{title}</div>
@@ -48,7 +48,7 @@ export const SimpleSlider = () => {
                   <div className="review__text">{text}</div>
                   <div className="review__author">{authorName}</div>
                   <div className="review__rating">
-                    <span/><span/><span/><span/><span/>
+                    {Array(5).fill('').map((_, index) => <span key={index} />)}
                   </div>
                 </article>
               </div>

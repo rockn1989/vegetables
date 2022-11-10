@@ -1,17 +1,25 @@
 import React from 'react';
 
 import { PageWrapper } from '../PageWrapper';
-import { Header } from '../Header';
 import { Layout } from '../Layout';
-import { Footer } from '../Footer';
+
+import { HeroSection } from '../Layout/Sections/HeroSection';
+import { BestSection } from '../Layout/Sections/BestSection';
+import { ParticularSection } from '../Layout/Sections/ParticularSection';
+import { SliderSection } from '../Layout/Sections/SliderSection';
+import { DownloadSection } from '../Layout/Sections/DownloadSection';
 
 export const App = () => {
   return (
     <div className="App light">
       <PageWrapper>
-        <Header />
-        <Layout />
-        <Footer />
+        <Layout>
+          <HeroSection />
+          <BestSection />
+          <ParticularSection />
+          <SliderSection />
+          <DownloadSection />
+        </Layout>
       </PageWrapper>
     </div>
   );

@@ -1,9 +1,7 @@
-@use "../App/vars";
-@use "../App/mixins";
+@use "../../App/vars";
+@use "../../App/mixins";
 
 .page-header {
-  //padding-top: math.div(50 * 100vw, 1440);
-  //padding-bottom: math.div(50 * 100vw, 1440);
 
   &__inner {
     position: relative;

@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 
 import "./advantages-list.scss";
 
@@ -27,11 +27,14 @@ const AdvantagesListMocks = [
 ];
 
 export const AdvantagesList = () => {
+  const [active, setActive] = useState(1);
+  const onItemClickHandler = (index: number) => setActive(index);
+
   return (
     <ul className="advantages-list">
       {AdvantagesListMocks.map(({ icon, text, label, width, height }, index) => {
         return (
-          <li className={index === 1 ? "advantages-list__item active" : "advantages-list__item"} key={index}>
+          <li className={active === index ? "advantages-list__item active" : "advantages-list__item"} key={index} onClick={() => onItemClickHandler(index)}>
             <div className="advantages-list__icon">
               <img src={icon} width={width} height={height} alt={label} />
             </div>

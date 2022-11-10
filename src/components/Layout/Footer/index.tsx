@@ -1,7 +1,18 @@
 import React from 'react'
 import './footer.scss';
 
-import { SocList } from '../SocList';
+import { SocList } from '../../SocList';
+
+const FooterNavMocks = [
+  {
+    title: 'Navigation',
+    links: ['About us', 'Service', 'Menu']
+  },
+  {
+    title: 'Resources',
+    links: ['Reviews', 'Blog', 'Update News']
+  }
+];
 
 export const Footer = () => {
   return (
@@ -20,23 +31,22 @@ export const Footer = () => {
           </div>
 
           <div className='footer__nav'>
-            <div className="footer__item">
-              <div className="footer__title">Navigation</div>
-              <ul className="footer__nav-list">
-                <li className="footer__nav-item"><a href="#" className="footer__nav-link">About us</a></li>
-                <li className="footer__nav-item"><a href="#" className="footer__nav-link">Service</a></li>
-                <li className="footer__nav-item"><a href="#" className="footer__nav-link">Menu</a></li>
-              </ul>
-            </div>
-
-            <div className="footer__item">
-              <div className="footer__title">Resources</div>
-              <ul className="footer__nav-list">
-                <li className="footer__nav-item"><a href="#" className="footer__nav-link">Reviews</a></li>
-                <li className="footer__nav-item"><a href="#" className="footer__nav-link">Blog</a></li>
-                <li className="footer__nav-item"><a href="#" className="footer__nav-link">Update News</a></li>
-              </ul>
-            </div>
+            {
+              FooterNavMocks.map(({ title, links }, index) => {
+                return (
+                  <div className="footer__item" key={index}>
+                    <div className="footer__title">{title}</div>
+                    <ul className="footer__nav-list">
+                      {
+                        links.map((link, index) => {
+                          return <li className="footer__nav-item" key={`link_${index}`}><a href="#" className="footer__nav-link">{link}</a></li>
+                        })
+                      }
+                    </ul>
+                  </div>
+                )
+              })
+            }
 
             <div className="footer__item">
               <div className="footer__title">Contact Us</div>

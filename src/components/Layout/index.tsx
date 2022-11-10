@@ -1,20 +1,18 @@
 import React from "react"
 import "./layout.scss";
+import { Header } from "./Header";
+import { Footer } from "./Footer";
 
-import { HeroSection } from "./Sections/HeroSection";
-import { BestSection } from "./Sections/BestSection";
-import { ParticularSection } from "./Sections/ParticularSection";
-import { SliderSection } from "./Sections/SliderSection";
-import { DownloadSection } from "./Sections/DownloadSection";
+interface LayoutProps {
+  children: React.ReactNode
+}
 
-export const Layout = () => {
+export const Layout = ({ children }: LayoutProps) => {
   return (
     <main className="page-main">
-      <HeroSection />
-      <BestSection />
-      <ParticularSection />
-      <SliderSection />
-      <DownloadSection />
+      <Header />
+      {children}
+      <Footer />
     </main>
   )
 };

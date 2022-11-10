@@ -1,14 +1,16 @@
 import React, { useState } from "react"
 import "./header.scss";
-import { MenuIcon } from "../Icons";
+import { MenuIcon } from "../../Icons";
+
+const HeaderNavMocks = ['About Us', 'Service', 'Menu', 'Contact'];
 
 interface BurgerIconProps {
-  onMobileClick: React.MouseEventHandler<HTMLButtonElement>
+  onClick: () => void
 };
 
-const BurgerIcon = ({ onMobileClick }: BurgerIconProps) => {
+const BurgerIcon = ({ onClick }: BurgerIconProps) => {
   return (
-    <button type="button" className="round-button hidden-md" onClick={onMobileClick}>
+    <button type="button" className="round-button hidden-md" onClick={onClick}>
       <MenuIcon width={20} height={20} />
     </button>
   )
@@ -27,13 +29,14 @@ export const Header = () => {
           <div className="main-nav-wrapper">
             <nav className={active ? 'main-nav active' : 'main-nav'}>
               <ul className="main-nav__list">
-                <li className="main-nav__item"><a href="#" className="main-nav__link">About Us</a></li>
-                <li className="main-nav__item"><a href="#" className="main-nav__link">Service</a></li>
-                <li className="main-nav__item"><a href="#" className="main-nav__link">Menu</a></li>
-                <li className="main-nav__item"><a href="#" className="main-nav__link">Contact</a></li>
+                {
+                  HeaderNavMocks.map((link, index) => {
+                    return <li className="main-nav__item" key={index}><a href="#" className="main-nav__link">{link}</a></li>
+                  })
+                }
               </ul>
             </nav>
-            <BurgerIcon onMobileClick={onMobileMenuClickHandler} />
+            <BurgerIcon onClick={onMobileMenuClickHandler} />
           </div>
 
           <div className="logo">

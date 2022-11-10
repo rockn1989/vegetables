@@ -12,8 +12,10 @@ export const DownloadSection = () => {
             <p className="download-section__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer...</p>
           </div>
           <div className="download-section__img">
-            <img src="/img/media/phone-1.png" width="222" height="482" alt="phone" loading="lazy" />
-            <img src="/img/media/phone-2.png" width="222" height="482" alt="phone" loading="lazy" />
+            <a href="#" download>
+              <img src="/img/media/phone-1.png" width="222" height="482" alt="phone" loading="lazy" />
+              <img src="/img/media/phone-2.png" width="222" height="482" alt="phone" loading="lazy" />
+            </a>
           </div>
 
         </div>
