@@ -1,0 +1,57 @@
+@use '../../../App/vars';
+@use '../../../App/mixins';
+
+.hero-section {
+  padding: 92px 0 50px;
+  background-color: var(--theme-bg-color);
+
+  .container {
+    position: relative;
+  }
+
+  &__header {
+    position: relative;
+    z-index: 15;
+  }
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @media (min-width: vars.$desk-w) {
+      margin-top: -40px;
+    }
+  }
+
+  &__text {
+    max-width: 637px;
+    margin: 0 auto 40px;
+  }
+
+  &__img {
+    mix-blend-mode: multiply;
+    flex: 1 1 75%;
+  }
+
+  .progress-list {
+    flex: 1 1 25%;
+
+    @media (min-width: vars.$desk-w-lg) {
+      justify-content: flex-end;
+    }
+  }
+
+  .decor {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transform: translate(-25%, -31%);
+
+    @media (min-width: vars.$desk-w) {
+      display: block;
+    }
+  }
+}

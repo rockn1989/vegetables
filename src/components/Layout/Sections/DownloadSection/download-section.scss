@@ -1,0 +1,69 @@
+@use '../../../App/vars';
+
+.download-section {
+  padding: 40px 0;
+
+  @media (min-width: vars.$tablet-w) {
+    padding: 40px 0 68px;
+  }
+
+  @media (min-width: vars.$desk-w) {
+    padding: 40px 0 146px;
+  }
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 60px 120px;
+  }
+
+  &__img {
+    display: none;
+
+    @media (min-width: vars.$desk-w) {
+      position: relative;
+      order: 1;
+      display: flex;
+      justify-content: flex-end;
+      flex: 1 1 calc(35% - 120px);
+    }
+
+    img {
+
+
+      &:nth-child(1) {
+        position: relative;
+        z-index: 15;
+      }
+
+      &:nth-child(2) {
+        position: absolute;
+        top: 0;
+        right: 40px;
+        transform: scale(0.85);
+        z-index: 14;
+      }
+    }
+  }
+
+  &__desc {
+    flex: 1 1 calc(65% - 120px);
+
+    @media (min-width: vars.$desk-w) {
+      order: 2;
+    }
+  }
+
+  &__text {
+    max-width: 574px;
+    line-height: 30px;
+  }
+}
+
+.phone-box {
+  position: relative;
+  height: 0;
+
+
+}

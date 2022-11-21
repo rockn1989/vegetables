@@ -1,0 +1,82 @@
+@use "../../App/vars";
+@use "../../App/mixins";
+
+.page-footer {
+  padding: 60px 0;
+  background-color: #FCFEFD;
+
+  @media (min-width: vars.$desk-w) {
+    padding: 60px 0 120px;
+  }
+
+  .logo {
+    margin-bottom: 30px;
+  }
+}
+
+.footer {
+  &__inner {
+    display: grid;
+    align-items: flex-start;
+    gap: 35px 0;
+    grid-template-columns: minmax(210px, 345px) 1fr;
+
+    @media (min-width: vars.$tablet-w) {
+      gap: 35px 150px;
+    }
+  }
+
+  &__info {
+    &:first-child {
+      @media (max-width: #{vars.$desk-w - 1px}) {
+        grid-column: 1 / -1;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__nav {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 35px 50px;
+
+    @media (max-width: #{vars.$desk-w - 1px}) {
+      grid-column: 1 / -1;
+    }
+
+    .footer__item {
+      &:first-child {
+        grid-column: unset;
+      }
+    }
+  }
+
+  &__title {
+    @include mixins.adpFont(18, 26, 24, 32, 320, 1280);
+    margin-bottom: 20px;
+    font-weight: 700;
+
+    @media (min-width: vars.$tablet-w) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__nav-list {
+    @include mixins.listReset();
+  }
+
+  &__nav-item {
+    margin-bottom: 21px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__contacts {
+    margin-bottom: 25px;
+  }
+}

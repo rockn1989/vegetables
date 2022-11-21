@@ -1,0 +1,60 @@
+@use '../App/vars';
+@use '../App/mixins';
+
+.advantages-list {
+  @include mixins.listReset();
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 500px;
+
+  &__item {
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+
+    background-color: var(--theme-second-color);
+
+    @media (min-width: vars.$tablet-w) {
+      padding: 40px 60px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+
+    &:hover {
+      background-color: var(--theme-bg-color);
+    }
+
+    &.active {
+      background-color: var(--theme-bg-color);
+    }
+  }
+
+  &__icon {
+    margin-right: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: var(--theme-bg-color);
+    flex-shrink: 0;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  &__count {
+    margin-bottom: 8px;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 700;
+  }
+}

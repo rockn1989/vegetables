@@ -1,0 +1,118 @@
+@use "../../App/vars";
+@use "../../App/mixins";
+
+.page-header {
+
+  &__inner {
+    position: relative;
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: 43% 1fr 43%;
+    align-items: center;
+
+    @media (min-width: vars.$tablet-w) {
+      padding: 28px 0;
+    }
+
+    @media (min-width: vars.$desk-w) {
+      padding: 44px 0;
+    }
+  }
+
+  .logo {
+    justify-self: center;
+  }
+}
+
+
+.main-nav {
+  justify-self: start;
+  display: none;
+
+  @media (max-width: #{vars.$tablet-w - 1px}) {
+    position: absolute;
+    top: 100%;
+    left: -20px;
+    right: -20px;
+    z-index: 999;
+  }
+
+  @media (min-width: vars.$tablet-w) {
+    display: block;
+  }
+
+  &.active {
+    display: block;
+  }
+
+  &__list {
+    @include mixins.listReset();
+    display: flex;
+    align-items: center;
+
+    @media (max-width: #{vars.$tablet-w - 1px}) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    display: block;
+    width: 100%;
+
+    @media (min-width: vars.$tablet-w) {
+      margin-right: 20px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    display: block;
+    white-space: nowrap;
+
+
+    @media (max-width: #{vars.$tablet-w - 1px}) {
+      padding: 10px 0;
+      background-color: var(--theme-bg-color-elements);
+      border-bottom: 1px solid var(--theme-second-color);
+      text-align: center;
+      color: var(--theme-second-color);
+    }
+  }
+
+}
+
+
+.toolbar {
+  justify-self: end;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+
+  &__buttons {
+    &>* {
+      margin-left: 20px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .button {
+    margin-left: 10px;
+
+    @media (min-width: vars.$mob-s) {
+      margin-left: 20px;
+    }
+
+    @media (min-width: vars.$tablet-w) {
+      margin-left: 40px;
+    }
+  }
+}
